@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tea Collection — Russel's</title>
+<meta name="description" content="Russel's Wellness tea collection — Ceylon fine teas, wellness teas, herbal infusions, artisan teas, organic teas and herbal balms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
+</head>
+<body class="is-loading" data-page="collection">
+<main id="top">
+
+<section class="phero phero--short">
+  <div class="phero__media"><video class="bgv" autoplay muted loop playsinline src="assets/video/22268-720.mp4"></video></div>
+  <div class="phero__shade"></div>
+  <div class="phero__content">
+    <p class="phero__crumb"><a href="index.html">Home</a> / Tea Collection</p>
+    <p class="eyebrow"><i></i>Russel's Wellness</p>
+    <h1 class="phero__title"><span class="line"><span class="split">Tea</span> <span class="split it">Collection</span></span></h1>
+    <p class="phero__lede">Pure Ceylon tea, sourced from Sri Lanka's lush hillsides — crafted with care, from leaf to cup.</p>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Pure Ceylon Tea</span><b>✦</b><span class="it">Healthy Benefits</span><b>✦</b><span>Tea from Scratch</span><b>✦</b><span class="it">Organic</span><b>✦</b>
+    <span>Pure Ceylon Tea</span><b>✦</b><span class="it">Healthy Benefits</span><b>✦</b><span>Tea from Scratch</span><b>✦</b><span class="it">Organic</span><b>✦</b>
+  </div>
+</div>
+
+<section id="shop">
+  <div class="toolbar">
+    <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
+    <div class="tools">
+      <input id="search" type="search" placeholder="Search teas…" aria-label="Search products">
+      <select id="sort" aria-label="Sort products">
+        <option value="default">Sort: Featured</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+        <option value="az">Name: A – Z</option>
+      </select>
+    </div>
+  </div>
+  <div class="cathead">
+    <h2 id="cat-title"></h2>
+    <p id="cat-blurb"></p>
+  </div>
+  <div class="pgrid" id="grid"></div>
+</section>
+
+<section class="pvideo">
+  <video class="bgv lazyv" muted loop playsinline preload="none" data-src="assets/video/20824-720.mp4"></video>
+  <p class="pvideo__text"><span class="script">crafted with care,</span>from leaf to cup.</p>
+</section>
+
+</main>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="m-name">
+  <div class="modal__bg" data-close></div>
+  <div class="modal__box">
+    <button class="modal__x" data-close aria-label="Close">×</button>
+    <div class="modal__img"><img id="m-img" alt=""></div>
+    <div class="modal__body">
+      <p class="eyebrow" id="m-cat"><i></i> </p>
+      <h2 id="m-name"></h2>
+      <span class="price" id="m-price"></span>
+      <p id="m-desc"></p>
+      <a class="btn" id="m-link" target="_blank" rel="noopener"><span>Buy on russelsglobal.com ↗</span></a>
+    </div>
+  </div>
+</div>
+
+<script src="layout.js"></script>
+<script src="data/products.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="collection.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

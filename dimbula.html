@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dimbula Tea — Russel's</title>
+<meta name="description" content="Ceylon Premium Misty Tea — black tea from the mist-kissed highlands of Dimbula, by Russel's.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
+</head>
+<body class="is-loading" data-page="dimbula">
+<main id="top">
+
+<section class="phero">
+  <div class="phero__media"><video class="bgv" autoplay muted loop playsinline src="assets/video/11193-720.mp4"></video></div>
+  <div class="phero__shade"></div>
+  <div class="phero__content">
+    <p class="phero__crumb"><a href="index.html">Home</a> / Dimbula Tea</p>
+    <p class="eyebrow"><i></i>Ceylon Premium Misty Tea</p>
+    <h1 class="phero__title"><span class="line"><span class="split it">Dimbula.</span></span></h1>
+    <p class="phero__lede">Black tea from the mist-kissed highlands of Dimbula — a captivating aroma, and freshness in every cup.</p>
+  </div>
+</section>
+
+<section class="sect">
+  <p class="eyebrow reveal"><i></i>A distinctive origin</p>
+  <p class="bigp fill">Emerging from the mist-kissed highlands of Dimbula, renowned for its unparalleled beauty and exquisite tea cultivation — a hallmark of sophistication in every sip.</p>
+</section>
+
+<section class="sect sect--tight">
+  <div class="two">
+    <figure class="clip"><img loading="lazy" src="assets/img/shop/2024/05/Ceylon-Premium-Misty-Tea-Loose-Leaf-Tea-200g-1536x1536-1.webp" alt="Ceylon Premium Misty Tea 200g"></figure>
+    <div class="prose">
+      <p class="eyebrow reveal" style="margin-bottom:26px"><i></i>Ceylon Premium Misty Tea</p>
+      <h2 class="h2 rise" style="margin-bottom:34px"><span class="line"><span>Mist-kissed,</span></span><span class="line"><span class="it">pure Ceylon.</span></span></h2>
+      <p class="reveal">This exceptional black tea celebrates its origin — the highlands of Dimbula — and stands out for a captivating aroma and unparalleled freshness.</p>
+      <p class="reveal">Available as loose leaf and in tea bags, so it suits the quiet moment at home as well as the office tea station.</p>
+      <a class="btn magnetic reveal" href="#range"><span>See the range →</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="pvideo">
+  <video class="bgv lazyv" muted loop playsinline preload="none" data-src="assets/video/49323-720.mp4"></video>
+  <p class="pvideo__text"><span class="script">from the misty hills,</span>to your cup.</p>
+</section>
+
+<section class="sect sect--cream" id="range">
+  <div class="sect__head">
+    <p class="eyebrow reveal"><i></i>The Dimbula range</p>
+    <h2 class="h2 rise"><span class="line"><span>Choose your <em class="it">pack.</em></span></span></h2>
+  </div>
+  <div class="pgrid pgrid--cream" id="dgrid" style="padding:0;min-height:0"></div>
+  <p class="reveal" style="margin-top:50px"><a class="link" href="collection.html">See the full collection <b>→</b></a></p>
+</section>
+
+</main>
+
+<script src="layout.js"></script>
+<script src="data/dimbula.js"></script>
+<script>
+(() => {
+  const list = window.DIMBULA || [];
+  const lkr = (n) => 'LKR ' + n.toLocaleString('en-US');
+  const g = document.getElementById('dgrid');
+  g.innerHTML = list.map((p) => `
+    <a class="pcard" href="${p.u}"${p.u === '#' ? '' : ' target="_blank" rel="noopener"'} data-cursor="View">
+      <div class="pcard__img"><span class="pcard__tag pcard__tag--out">Sample</span><img loading="lazy" src="${p.i}" alt="${p.n}"></div>
+      <span class="pcard__cat">Dimbula · ${p.t}</span>
+      <h3>${p.n}</h3>
+      <span class="price">${lkr(p.p)}</span>
+    </a>`).join('');
+  const io = new IntersectionObserver((es) => es.filter((e) => e.isIntersecting).forEach((e, i) => {
+    e.target.style.transitionDelay = i * 60 + 'ms'; e.target.classList.add('in'); io.unobserve(e.target);
+  }), { rootMargin: '0px 0px -6% 0px' });
+  g.querySelectorAll('.pcard').forEach((c) => io.observe(c));
+})();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
